@@ -79,7 +79,7 @@ with col1:
 
 with col2:
     # Carregar o dataset com atividades e calorias queimadas
-    burned_calories = pd.read_csv('C:/Users/Josi/ProjetoTP1/data/burned_calories.csv')
+    burned_calories = pd.read_csv('data/burned_calories.csv')
 
     # Renomear a coluna
     burned_calories.rename(columns={
