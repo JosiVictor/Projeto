@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6, p {{
 st.set_page_config(layout="wide")
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-model = joblib.load('trained_model.pkl')
+model = joblib.load('trained_model.pkl.gz')
 
 feature_names = model.feature_names_in_
 
