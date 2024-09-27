@@ -3,6 +3,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import joblib
+import gzip
+import shutil 
 
 calories_df = pd.read_csv('C:/Users/Josi/ProjetoTP1/data/calories.csv')
 exercise_df = pd.read_csv('C:/Users/Josi/ProjetoTP1/data/exercise.csv')
@@ -21,7 +23,7 @@ y = df['Calories']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Treinar o modelo
-model = RandomForestRegressor(n_estimators=300, max_depth=None, min_samples_split=2, random_state=42)
+model = RandomForestRegressor(n_estimators=100, max_depth=None, min_samples_split=2, random_state=42)
 model.fit(X_train, y_train)
 
 # Previsão
@@ -35,4 +37,5 @@ print(f"Mean Absolute Error: {mae:.2f}")
 print(f"R² Score: {r2:.2f}")
 
 # Salvar o modelo treinado
-joblib.dump(model, 'trained_model.pkl')
+with gzip.open('trained_model.pkl.gz', 'wb') as f_out:
+    joblib.dump(model, f_out, compress=3)
