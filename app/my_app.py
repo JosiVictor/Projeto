@@ -44,7 +44,7 @@ encoder_genero = LabelEncoder()
 encoder_genero.fit(['Masculino', 'Feminino'])
 
 # Carregar dados de calorias queimadas
-calorias_quimadas = pd.read_csv('C:/Users/Josi/ProjetoTP1/data/burned_calories.csv') 
+calorias_quimadas = pd.read_csv('data/burned_calories.csv') 
 calorias_quimadas.rename(columns={
     "Activity, Exercise or Sport (1 hour)": "Atividade",
     "Calories per kg": "Calorias_Por_Kg"
@@ -102,7 +102,7 @@ def pagina_sugestoes_atividades():
     if calorias_previstas is not None and peso is not None:
         
 
-        calorias_quimadas = pd.read_csv('C:/Users/Josi/ProjetoTP1/data/burned_calories.csv')
+        calorias_quimadas = pd.read_csv('data/burned_calories.csv')
         calorias_quimadas.rename(columns={
             "Activity, Exercise or Sport (1 hour)": "Atividade",
             "Calories per kg": "Calorias_Por_Kg"
