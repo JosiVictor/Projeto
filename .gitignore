@@ -1,1 +1,15 @@
-Projeto/
+# Ignorar arquivos de dados
+data/*.csv
+
+# Ignorar ambiente virtual
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar configurações de IDE
+.vscode/
+.idea/

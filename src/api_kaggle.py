@@ -3,12 +3,12 @@ import zipfile
 import os
 
 # Caminho para a pasta de extração
-extract_folder = 'C:\Users\Josi\ProjetoTP1\data'
-
-
+extract_folder = 'C:/Users/Josi/ProjetoTP1/data'
 
 # Caminho para o arquivo ZIP do primeiro dataset
 zip_path = 'C:/Users/Josi/ProjetoTP1/fmendesdat263xdemos.zip'
+
+
 
 os.makedirs(extract_folder, exist_ok=True)
 
