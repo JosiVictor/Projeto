@@ -35,7 +35,7 @@ st.set_page_config(layout="wide")
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Carregar o modelo (atualize o caminho se necessário)
-modelo = joblib.load(r'C:/Users/Josi/ProjetoTP1/trained_model.pkl')
+modelo = joblib.load(r'trained_model.pkl')
 
 nomes_features = modelo.feature_names_in_
 
